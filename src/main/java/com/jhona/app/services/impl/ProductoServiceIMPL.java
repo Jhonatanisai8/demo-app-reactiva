@@ -32,7 +32,7 @@ public class ProductoServiceIMPL
   public Flux<Producto> obtenerTodos() {
     return productoRepository
         .findAll()
-        .delayElements(Duration.ofMillis(500)); // retraso para ver el streaming
+        .delayElements(Duration.ofSeconds(5)); // retraso para ver el streaming
   }
 
 }
